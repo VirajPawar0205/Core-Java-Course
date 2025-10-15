@@ -1,33 +1,30 @@
-package myPackage;
 
-public class Abc {
-	void Addation()
+public class Abc extends Xyz implements I1,I2{
+	
+	public void sub()
 	{
-		try
-		{
-			int i,sum=0;
-			for(i=0;i<100;i++)
-			{
-				sum=sum+i;
-				
-				if(sum >100)//WAP to accept age from user and if that age is in between 21 to 30 then display "you are eligible otherwise throw an exception"
-				{
-					throw new UDexception("Addation exceed 100");					
-				}
-				else
-				{
-					System.out.println(sum);
-				}
-			}
-		}
-		catch(UDexception e)
-		{
-			System.out.println("Exception is = "+e.message);
-		}
+		System.out.println("Calling sub");
 	}
+	public void mul()
+	{
+		System.out.println("calling mul");
+	}
+	public void show()
+	{
+		System.out.println("Calling show");
+	}
+
 	public static void main(String[] args) {
-		Abc a1=new Abc();
-		a1.Addation();
+		//This method is use to replace the Multilevel Inheritance uses in most of the programs call interface ल
+Abc a1=new Abc();
+a1.Add();
+a1.sub();
+a1.mul();
+a1.show();
+I2 i1=new Abc();
+i1.Add();
+i1.mul();
+
 	}
 
 }
